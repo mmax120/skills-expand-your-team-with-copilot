@@ -1,0 +1,79 @@
+name: Feature Request
+description: Suggest a new feature or improvement for the activities management system
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a new feature! Please provide details below to help us understand what you need.
+        
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: What new feature would you like?
+      description: Describe the feature or improvement you'd like to see
+      placeholder: "Example: Add difficulty levels to activities so students can choose beginner, intermediate, or advanced activities."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why is this feature needed?
+      description: Explain the problem this feature would solve or how it would help
+      placeholder: "Example: Freshmen and seniors are attending the same activities, but some students are asking for level-appropriate activities."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: How should this feature work?
+      description: Describe how you envision this feature working
+      placeholder: |
+        Example:
+        - Each activity should have an optional difficulty level: Beginner, Intermediate, or Advanced
+        - If no level is specified, the activity is for all levels
+        - Add a filter in the left sidebar to filter activities by difficulty level
+        - Include an "All" option to show activities with no specified difficulty
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: feature-area
+    attributes:
+      label: Which area does this feature affect?
+      description: Select where this feature would be added
+      options:
+        - Activities list/display
+        - Filtering/Search
+        - Sign-up process
+        - Student information
+        - Navigation
+        - Data management
+        - Other
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: priority
+    attributes:
+      label: How important is this feature?
+      description: Help us understand the priority level
+      options:
+        - Critical - Needed immediately
+        - High - Very important, needed soon
+        - Medium - Would be helpful to have
+        - Low - Nice to have when possible
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional information
+      description: Add any other context, mockups, examples, or suggestions
+      placeholder: "Example: Similar systems use a star rating (1-5 stars) to show difficulty. We could also consider that approach."
+    validations:
+      required: false

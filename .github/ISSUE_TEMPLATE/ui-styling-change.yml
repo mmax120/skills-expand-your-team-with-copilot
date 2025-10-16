@@ -1,0 +1,82 @@
+name: UI/Styling Change
+description: Request changes to how the website looks (colors, layout, visual elements)
+title: "[UI]: "
+labels: ["enhancement", "ui"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a visual improvement! Please describe the styling or design changes you'd like to see.
+        
+  - type: textarea
+    id: current-appearance
+    attributes:
+      label: What does it look like now?
+      description: Describe the current appearance or design
+      placeholder: "Example: The website currently has a blue color scheme throughout."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: desired-appearance
+    attributes:
+      label: What should it look like?
+      description: Describe how you want it to look instead
+      placeholder: "Example: The website should use white and lime green colors to match our school branding."
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: change-type
+    attributes:
+      label: What type of visual change is this?
+      description: Select the type of styling change needed
+      options:
+        - Colors/Theme
+        - Layout/Spacing
+        - Fonts/Typography
+        - Images/Graphics
+        - Buttons/Controls
+        - Dark mode/Light mode
+        - Animations/Effects
+        - Other
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: affected-pages
+    attributes:
+      label: Which pages should be updated?
+      description: Select which parts of the website need this change
+      options:
+        - All pages (entire website)
+        - Homepage only
+        - Activities list page
+        - Sign-up forms
+        - Navigation/Header
+        - Footer
+        - Specific elements
+    validations:
+      required: true
+      
+  - type: textarea
+    id: specific-elements
+    attributes:
+      label: Specific colors, values, or references
+      description: Provide exact colors (hex codes), sizes, or links to reference materials
+      placeholder: |
+        Example:
+        - Primary color: #32CD32 (lime green)
+        - Secondary color: #FFFFFF (white)
+        - Mascot images: https://octodex.github.com/
+    validations:
+      required: false
+      
+  - type: textarea
+    id: additional-ideas
+    attributes:
+      label: Additional design ideas
+      description: Any other visual suggestions or inspirations?
+      placeholder: "Example: It would look cool if the background had animated Git-style branch lines!"
+    validations:
+      required: false
