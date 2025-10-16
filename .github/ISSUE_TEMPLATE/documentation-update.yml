@@ -1,0 +1,79 @@
+name: Documentation Update
+description: Request updates or improvements to documentation, instructions, or help text
+title: "[Docs]: "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve our documentation! Please describe what needs to be updated.
+        
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: What type of documentation needs updating?
+      description: Select the type of documentation
+      options:
+        - User instructions/Help text
+        - Developer setup guide
+        - API documentation
+        - README file
+        - Installation guide
+        - Feature explanation
+        - Other
+    validations:
+      required: true
+      
+  - type: textarea
+    id: current-issue
+    attributes:
+      label: What is wrong or missing?
+      description: Describe what's incorrect, unclear, or missing in the current documentation
+      placeholder: "Example: The developer guide mentions old package names that no longer exist."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: suggested-update
+    attributes:
+      label: What should be updated?
+      description: Describe what changes should be made to the documentation
+      placeholder: |
+        Example:
+        - Update package names to match current dependencies
+        - Add section about running tests
+        - Clarify the setup steps for new developers
+    validations:
+      required: true
+      
+  - type: textarea
+    id: doc-location
+    attributes:
+      label: Where is this documentation located?
+      description: Specify the file path or page where the documentation exists (if you know it)
+      placeholder: "Example: docs/how-to-develop.md or src/README.md"
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Who is the intended audience?
+      description: Who will read this documentation?
+      options:
+        - Teachers/Staff
+        - Students
+        - Developers
+        - System administrators
+        - Everyone
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional information
+      description: Any other details, examples, or references that would help
+      placeholder: "Example: Other school systems have great setup guides we could reference."
+    validations:
+      required: false

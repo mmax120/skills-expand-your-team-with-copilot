@@ -1,0 +1,64 @@
+name: Bug Report
+description: Report a problem with the website that needs to be fixed
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug! Please fill out the sections below to help us understand and fix the problem.
+        
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: What is not working correctly?
+      description: Describe the problem you're experiencing. Be as specific as possible.
+      placeholder: "Example: The website shows blue colors, but our school colors are white and lime green."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: What should happen instead?
+      description: Describe what you expected to see or what the correct behavior should be.
+      placeholder: "Example: The website should use our school colors - white and lime green."
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: affected-area
+    attributes:
+      label: Which part of the website is affected?
+      description: Select the area where you noticed the problem
+      options:
+        - Homepage/Landing page
+        - Activities list
+        - Sign-up functionality
+        - Navigation/Menu
+        - Colors/Styling
+        - Performance/Speed
+        - Other
+    validations:
+      required: true
+      
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: How can we see this problem?
+      description: Tell us the steps to reproduce the issue
+      placeholder: |
+        1. Open the website
+        2. Look at the main page
+        3. Notice the colors are blue instead of white and lime green
+    validations:
+      required: false
+      
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional information
+      description: Add any other context, screenshots, or details that might help
+      placeholder: "Example: Our school mascot should also be displayed on the page. We can use images from https://octodex.github.com/"
+    validations:
+      required: false
